@@ -116,10 +116,6 @@ class SchedulerActions:
 
         self._update_pod_and_nodes(allocated_nodes, allocated_pods)
 
-    from collections import defaultdict
-
-    from collections import defaultdict
-
     def _preempt(self):
         if not self.pending_pods:
             log.info("No pending pods, skip preempt action!")
