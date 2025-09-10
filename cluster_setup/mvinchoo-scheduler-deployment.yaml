@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mvinchoo-scheduler
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mvinchoo-scheduler
+  template:
+    metadata:
+      labels:
+        app: mvinchoo-scheduler
+    spec:
+      serviceAccountName: mvinchoo-scheduler
+      containers:
+        - name: mvinchoo-scheduler
+          image: mvinchoo-scheduler:0.0.27
+          imagePullPolicy: IfNotPresent
