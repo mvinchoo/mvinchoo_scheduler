@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: test-pod-4
+  name: test-pod-5
 spec:
   schedulerName: mvinchoo-scheduler
   priorityClassName: high-priority

@@ -16,5 +16,5 @@ spec:
       serviceAccountName: mvinchoo-scheduler
       containers:
         - name: mvinchoo-scheduler
-          image: mvinchoo-scheduler:0.0.27
+          image: mvinchoo-scheduler:0.0.41
           imagePullPolicy: IfNotPresent

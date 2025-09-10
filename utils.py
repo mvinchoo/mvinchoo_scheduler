@@ -51,12 +51,16 @@ def get_pending_pods() -> List[PodSpec]:
         if p.spec.scheduler_name != SCHEDULER_NAME:
             continue
 
+        annotations = p.metadata.annotations or {}
+        pod_group = annotations.get("pod-group", "")
+
         result.append(
             PodSpec(
                 namespace=p.metadata.namespace,
                 name=p.metadata.name,
                 priority=p.spec.priority if p.spec.priority is not None else 0,
                 creation_timestamp=p.metadata.creation_timestamp,
+                pod_group=pod_group
             )
         )
     return result
