@@ -54,7 +54,7 @@ When preemption happens:
 > Extra point: implement appropriate scheduling retry mechanism. (If not enough time, just think and mention on README)
 
 
-Current scheduler operates in sessions (inspired from OSS Volcano which we also use at LinkedIn)
+Current scheduler operates in sessions (inspired from OSS Volcano)
 
 After a scheduling cycle finishes, it will sleep for 5 seconds and start a new cycle. (sort of busy loop logic)
 
